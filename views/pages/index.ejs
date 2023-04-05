@@ -1,0 +1,42 @@
+<head>
+    <%- include('../globals/head'); %>
+</head>
+
+<body class="container">
+    <header>
+        <%- include('../globals/header'); %>
+    </header>
+    <main>
+        <div class="jumbotron">
+            <section>
+                <div class="product">
+                  <img src="https://i.imgur.com/EHyR2nP.png" alt="The cover of Stubborn Attachments" />
+                  <div class="description">
+                    <h3>Introductory offer</h3>
+                    <h5>$0.99</h5>
+                  </div>
+                </div>
+                <form action="/create-checkout-session" method="POST">
+                  <button class="btn btn-primary" type="submit" id="checkout-button">Checkout</button>
+                </form>
+              </section>
+              <section>
+                <div class="product">
+                    <img src="https://i.imgur.com/EHyR2nP.png" alt="The cover of Stubborn Attachments" />
+                  <div class="description">
+                    <h3>Sub Product</h3>
+                    <h5>$1 / day</h5>
+                  </div>
+                </div>
+                <form action="/create-checkout-session-subscription" method="POST">
+                  <input type="hidden" name="lookup_key" value="test-sub-product" />
+                  <button class="btn btn-primary" id="checkout-and-portal-button" type="submit">Checkout</button>
+                </form>
+              </section>
+        </div>
+    </main>
+    <footer>
+    </footer>
+</body>
+
+</html>
